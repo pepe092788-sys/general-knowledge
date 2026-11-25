@@ -19,6 +19,7 @@ export default defineConfig({
       routeMiddleware: './src/sidebar-subtitles.ts',
       customCss: ['./src/styles/sidebar.css'],
       pagination: false,
+      tableOfContents: false,
       sidebar: [
         { label: '分野から探す', slug: 'topics' },
         { label: '自然科学', collapsed: true, items: [{ autogenerate: { directory: 'science', collapsed: true } }] },
