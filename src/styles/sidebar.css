@@ -1,0 +1,26 @@
+#starlight__sidebar a[data-article-subtitle] > span:first-child {
+  font-weight: 600;
+}
+
+#starlight__sidebar a[data-article-subtitle]::after {
+  content: attr(data-article-subtitle);
+  display: block;
+  margin-block-start: 0.2rem;
+  padding-inline-start: 0.5rem;
+  font-size: var(--sl-text-xs);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+#starlight__sidebar a[data-article-subtitle]:not([aria-current='page'])::after {
+  color: color-mix(in srgb, var(--sl-color-gray-3) 80%, var(--sl-color-gray-2));
+}
+
+/* Reduce spacing between consecutive body paragraphs. */
+.sl-markdown-content p + p {
+  margin-top: 0.5rem;
+}
+
+#starlight__sidebar .top-level > li:has(> .site-about-link) {
+  margin-block-start: 2rem;
+}
